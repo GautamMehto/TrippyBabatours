@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+#Header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(TrippyBabatours/newBg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#header {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header a img {
+    height: 90px;
+    margin-left: 50px;
+}
+
+#header ul {
+    width: 35vw;
+    height: 10vh;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header ul li {
+    width: fit-content;
+    margin-left: 2vw;
+    list-style: none;
+}
+
+#header ul li a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+}
+
+#cancel,
+#menu {
+    display: none;
+    color: white;
+    margin-right: 50px;
+}
+
+.container {
+    color: white;
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    margin: 3vh 3vw 0vh 7vw;
+    justify-content: space-between;
+}
+
+#header-text {
+    width: 60%;
+}
+
+#header-text h1 {
+    font-size: 4rem;
+    margin-bottom: 5vh;
+    font-weight: bolder;
+}
+
+.contact-us {
+    min-width: 30vw;
+    height: 70vh;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: black;
+    align-items: center;
+    text-transform: capitalize;
+    padding: 4vh;
+}
+
+.contact-us h2 {
+    width: 90%;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 5vh;
+}
+
+.rows {
+    width: 90%;
+    height: max-content;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    margin-bottom: 2vh;
+}
+
+select {
+    width: 100%;
+    height: 7vh;
+    border: 0px;
+    border-bottom: 1px solid grey;
+    text-transform: capitalize;
+}
+
+.rows input {
+    width: 100%;
+    border: 0px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid grey;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.row2 {
+    width: 90%;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.send-message {
+    min-width: 80%;
+    height: 8vh;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    border-radius: 50px;
+    margin-top: 3vh;
+    border: 0;
+    outline: 0;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.send-message::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 8vh;
+    border-radius: 50px;
+    border: 0;
+    outline: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: transparent;
+}
+
+.send-message:hover::before {
+    animation: buttonAnimation .5s ease-in-out 1;
+}
+
+@keyframes buttonAnimation {
+    0% {
+        background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        opacity: .8;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+}
+
+#About {
+    width: 100%;
+    /* height: 100vh; */
+    background-color: white;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 100px;
+}
+
+#About h2 {
+    font-size: 2.8rem;
+    margin-bottom: 3vh;
+}
+
+#About img {
+    min-width: 55vw;
+    /* max-height: 55vh; */
+}
+
+#Services {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 10vh 100px;
+    position: relative;
+
+}
+
+.package {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #00bf72; */
+}
+
+.package h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1vh;
+}
+
+.cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.card {
+    border-radius: 30px 30px 0px 0px;
+    overflow: hidden;
+    box-shadow: 0px 5px 8px 2px rgba(0, 0, 0, 0.3);
+    position: relative;
+
+}
+
+.card span {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    font-weight: 900;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.card img {
+    width: 350px;
+}
+
+.card div h4 {
+    font-weight: 100;
+}
+
+.card .details div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .details div h4:last-child {
+    cursor: pointer;
+    color: #208FC3;
+}
+
+.card .details {
+    padding: 2vh 2vh;
+}
+
+.card div div h4 {
+    font-weight: 900;
+}
+
+.mode {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    border-radius: 0px 10px 0px 0px;
+    top: 220px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mode img {
+    width: 40px;
+}
+
+#layer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: transform 1s;
+}
+
+#contact-form {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: black;
+    align-items: center;
+    box-shadow: 0px 5px 8px 2px rgba(0, 0, 0, 0.3);
+    text-transform: capitalize;
+    position: relative;
+    overflow: hidden;
+    padding: 2vw;
+}
+
+#contact-form img {
+    width: 400px;
+}
+
+#contact-form i {
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    right: 20px;
+    top: 35px;
+
+}
+
+#contact-form h2 {
+    width: 90%;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 5vh;
+}
+
+#Short-Banner {
+    width: 100%;
+    height: 70vh;
+    background-image: url(TrippyBabatours/Shortbanner.png);
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#Short-Banner div {
+    width: 40%;
+    /* height: 50vh; */
+    float: right;
+    margin-right: 10%;
+    /* background-color: red; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#Short-Banner div h2 {
+    font-size: 2.5rem;
+}
+
+#Short-Banner div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    text-decoration: none;
+    font-size: .7rem;
+
+}
+
+#Feedback {
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vh 0px 10vh 100px;
+    position: relative;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+#bg {
+    /* height: 100vh; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .3;
+    z-index: 1;
+}
+
+.feedback-slide {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+}
+
+.feedback-slide h2 {
+    font-size: 2.5rem;
+}
+
+#review {
+    min-width: 50%;
+    position: relative;
+    z-index: 2;
+    /* display: none; */
+}
+
+.carousel {
+    min-width: 50%;
+    height: 60vh;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    /* border: 1px solid  black; */
+}
+
+.carousel-item {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 0 0 100%;
+    display: flex;
+    padding: 4vh 4vh 4vh 0vh;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item #stars {
+    width: 100%;
+}
+
+.carousel-item p {
+    font-size: 1.1rem;
+}
+
+.carousel-item #stars i {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.photo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+.photo img {
+    width: 70px;
+    border-radius: 50%;
+}
+
+.photo div {
+    width: 80%;
+}
+
+.photo .Quotation {
+    width: 200px;
+    position: absolute;
+    right: 0px;
+    bottom: -30px;
+}
+
+#Footer {
+    width: 100%;
+    background-color: #000638;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vh 0vh 2vh 5vh;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: gray;
+    margin-bottom: 5vh;
+}
+
+#companyD {
+    width: 40%;
+    /* background-color: red; */
+}
+
+#alc {
+    width: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+#alc div h4 {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 2vh;
+}
+
+#alc div li {
+    width: max-content;
+    font-size: 1.1rem;
+    margin-bottom: 1vh;
+    cursor: pointer;
+}
+
+#about,
+#link {
+    margin-right: 5vw;
+}
+
+#contact div {
+    font-size: 1.1rem;
+    margin-bottom: 1vh;
+    cursor: pointer;
+}
+
+#contact div i {
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#companyD img {
+    width: 90px;
+    margin-bottom: 5vh;
+}
+
+hr {
+    width: 95%;
+    margin-bottom: 2vh;
+}
+
+#copy {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
